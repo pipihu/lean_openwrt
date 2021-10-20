@@ -119,7 +119,7 @@ jobs:
       uses: actions/upload-artifact@main
       if: steps.organize.outputs.status == 'success' && env.UPLOAD_FIRMWARE_DIR == 'true' && !cancelled()
       with:
-        name: OpenWrt_firmware$_{{ env.DEVICE_NAME }}_${{ env.FILE_TIME }}
+        name: OpenWrt_firmware_${{ env.DEVICE_NAME }}_${{ env.FILE_TIME }}
         path: ${{ env.FIRMWARE }}
 
     - name: Upload firmware to release
