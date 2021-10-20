@@ -56,7 +56,7 @@ jobs:
       run: |
         chmod +x $DIY_P1_SH
         cd openwrt
-        $GITHUB_WORKSPACE/$DIY_P1_SH
+        $GITHUB_WORKSPACE/$DIY_P1_SH ${{ secrets.RELEASES_TOKEN }}
 
     - name: Update feeds
       run: cd openwrt && ./scripts/feeds update -a
